@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pteridófitas — Aula Completa | Biodiversidade Vegetal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#f3eddd;
+  --parchment-2:#ece3cd;
+  --ink:#22281f;
+  --ink-soft:#3c4636;
+  --forest:#284a31;
+  --forest-deep:#1c3424;
+  --moss:#5d7642;
+  --fern:#869b53;
+  --spore:#cf9233;
+  --soro:#8a4a26;
+  --terra:#b35b2c;
+  --line:#cbbf9e;
+  --paper-card:#fbf8ef;
+  --shadow:rgba(34,40,31,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  font-family:'Newsreader',Georgia,serif;
+  background:var(--parchment);
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(134,155,83,.10), transparent 38%),
+    radial-gradient(circle at 88% 22%, rgba(207,146,51,.10), transparent 40%);
+}
+img{max-width:100%;display:block}
+a{color:var(--terra)}
+
+/* ---------- TOPBAR ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(28,52,36,.97);
+  backdrop-filter:blur(6px);
+  border-bottom:2px solid var(--spore);
+}
+.topbar-inner{
+  max-width:1180px;margin:0 auto;
+  display:flex;align-items:center;gap:14px;
+  padding:11px 22px;
+}
+.brand{
+  font-family:'Fraunces',serif;font-weight:600;
+  color:var(--parchment);font-size:1.05rem;letter-spacing:.3px;
+  white-space:nowrap;
+}
+.brand span{color:var(--spore)}
+.nav{
+  display:flex;gap:5px;flex-wrap:wrap;overflow-x:auto;
+  margin-left:auto;
+}
+.nav a{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.69rem;text-transform:uppercase;letter-spacing:.6px;
+  color:#d9e2cf;text-decoration:none;
+  padding:5px 9px;border-radius:6px;white-space:nowrap;
+  transition:.2s;
+}
+.nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+
+/* ---------- HERO ---------- */
+.hero{
+  max-width:1180px;margin:0 auto;padding:54px 22px 30px;
+  position:relative;
+}
+.kicker{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.74rem;letter-spacing:3px;text-transform:uppercase;
+  color:var(--soro);font-weight:600;
+}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.6rem,7vw,5.1rem);
+  line-height:1.02;font-weight:600;
+  color:var(--forest-deep);
+  margin:.12em 0 .18em;
+  letter-spacing:-1px;
+}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero .lead{
+  font-size:1.22rem;max-width:62ch;color:var(--ink-soft);
+}
+.hero-meta{
+  display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;
+}
+.tag{
+  font-family:'Spline Sans Mono',monospace;font-size:.7rem;
+  text-transform:uppercase;letter-spacing:.8px;
+  background:var(--parchment-2);border:1px solid var(--line);
+  color:var(--ink-soft);padding:6px 12px;border-radius:20px;
+}
+.tag.solid{background:var(--forest);color:var(--parchment);border-color:var(--forest)}
+
+/* ---------- SECTION ---------- */
+main{max-width:1180px;margin:0 auto;padding:0 22px 80px}
+.section{
+  margin-top:34px;
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:38px 40px;
+  box-shadow:0 14px 34px -22px var(--shadow);
+}
+.section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.snum{
+  font-family:'Spline Sans Mono',monospace;font-weight:600;
+  font-size:.92rem;color:var(--parchment);
+  background:var(--moss);
+  padding:4px 11px;border-radius:8px;flex:none;
+}
+.section h2{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:clamp(1.7rem,3.6vw,2.5rem);
+  color:var(--forest-deep);line-height:1.1;letter-spacing:-.5px;
+}
+.section h3{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:1.42rem;color:var(--forest);
+  margin:30px 0 8px;
+}
+.section h4{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:1.12rem;color:var(--soro);
+  margin:20px 0 4px;
+}
+.section p{margin:10px 0}
+.section ul,.section ol{margin:10px 0 10px 4px;padding-left:24px}
+.section li{margin:7px 0}
+.lead-p{font-size:1.12rem;color:var(--ink-soft)}
+strong{color:var(--forest-deep);font-weight:600}
+em.sci{font-style:italic;color:var(--soro);font-weight:500}
+.divider{
+  height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);
+  margin:26px 0;
+}
+
+/* ---------- BOXES ---------- */
+.box{
+  border-radius:13px;padding:18px 22px;margin:18px 0;
+  border:1px solid;
+}
+.box-title{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.72rem;text-transform:uppercase;letter-spacing:1.4px;
+  font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:7px;
+}
+.box.def{background:#eef3e3;border-color:#c2d3a0}
+.box.def .box-title{color:var(--moss)}
+.box.complement{background:#f6ecd9;border-color:#e3c98c}
+.box.complement .box-title{color:var(--soro)}
+.box.warn{background:#f7e6dd;border-color:#dfac8e}
+.box.warn .box-title{color:var(--terra)}
+.box.exam{background:#e7eee9;border-color:#9fbfa8}
+.box.exam .box-title{color:var(--forest)}
+.box ul{margin-bottom:0}
+
+/* ---------- TABLE ---------- */
+.tbl-wrap{overflow-x:auto;margin:20px 0}
+table{
+  width:100%;border-collapse:collapse;
+  font-size:.97rem;background:#fff;
+  border-radius:10px;overflow:hidden;
+  border:1px solid var(--line);
+}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #e7ddc2}
+th{
+  background:var(--forest);color:var(--parchment);
+  font-family:'Spline Sans Mono',monospace;font-weight:600;
+  font-size:.74rem;text-transform:uppercase;letter-spacing:.7px;
+}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even),tr:nth-child(even) td{background:#f7f2e4}
+.tbl-wrap caption{
+  caption-side:top;text-align:left;font-style:italic;
+  color:var(--ink-soft);margin-bottom:8px;font-size:.95rem;
+}
+
+/* ---------- PHYLO TREE ---------- */
+.tree{
+  background:linear-gradient(160deg,#eef2e2,#e6ecd6);
+  border:1px solid #c8d4ab;border-radius:14px;
+  padding:24px;margin:20px 0;
+}
+.tree-line{
+  display:flex;align-items:center;gap:12px;
+  padding:9px 0;border-bottom:1px dashed #bcc9a0;
+}
+.tree-line:last-child{border-bottom:none}
+.node-dot{
+  width:13px;height:13px;border-radius:50%;flex:none;
+  border:2px solid #fff;box-shadow:0 0 0 1px var(--moss);
+}
+.tree-syn{
+  font-family:'Spline Sans Mono',monospace;font-size:.78rem;
+  background:#fff;border:1px solid var(--line);
+  padding:3px 9px;border-radius:14px;color:var(--soro);font-weight:600;
+  white-space:nowrap;
+}
+.tree-grp{font-weight:600;color:var(--forest-deep)}
+.tree-note{color:var(--ink-soft);font-size:.96rem}
+
+/* ---------- CYCLE DIAGRAM ---------- */
+.cycle{
+  background:#f1ecdb;border:1px solid var(--line);
+  border-radius:14px;padding:26px 20px;margin:22px 0;
+}
+.cycle-title{
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.16rem;
+  color:var(--forest-deep);text-align:center;margin-bottom:18px;
+}
+.flow{
+  display:flex;flex-wrap:wrap;align-items:stretch;
+  justify-content:center;gap:8px;
+}
+.step{
+  background:#fff;border:1.5px solid var(--moss);
+  border-radius:10px;padding:9px 13px;
+  font-size:.84rem;line-height:1.32;
+  max-width:178px;min-width:120px;flex:1 1 130px;
+  box-shadow:0 4px 10px -7px var(--shadow);
+}
+.step b{display:block;font-size:.88rem;color:var(--forest-deep)}
+.step small{color:var(--ink-soft);font-size:.76rem}
+.step.dip{border-color:var(--terra);background:#fbeee6}
+.step.hap{border-color:var(--moss);background:#eef4e2}
+.step.event{border-color:var(--spore);background:#fbf1da;border-style:dashed}
+.arrow{
+  align-self:center;font-size:1.3rem;color:var(--soro);
+  font-weight:700;flex:none;padding:0 2px;
+}
+.ploidy{
+  display:inline-block;font-family:'Spline Sans Mono',monospace;
+  font-size:.66rem;font-weight:600;padding:1px 6px;border-radius:9px;
+  margin-top:3px;
+}
+.p2n{background:var(--terra);color:#fff}
+.pn{background:var(--moss);color:#fff}
+.legend-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:6px 18px;margin:14px 0;
+}
+.legend-grid div{font-size:.9rem;padding:2px 0}
+.legend-grid b{
+  font-family:'Spline Sans Mono',monospace;color:var(--terra);
+  font-size:.82rem;margin-right:5px;
+}
+
+/* ---------- VIDEO CARDS ---------- */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-top:14px}
+.video-card{
+  display:flex;flex-direction:column;
+  background:linear-gradient(165deg,#243f2c,#16291d);
+  border-radius:14px;padding:22px;color:var(--parchment);
+  text-decoration:none;border:1px solid #38543f;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.video-card:hover{transform:translateY(-4px);box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
+.play{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--terra);display:flex;align-items:center;justify-content:center;
+  margin-bottom:12px;
+}
+.play::after{
+  content:"";border-style:solid;border-width:9px 0 9px 15px;
+  border-color:transparent transparent transparent #fff;margin-left:3px;
+}
+.video-card .vlabel{
+  font-family:'Spline Sans Mono',monospace;font-size:.66rem;
+  letter-spacing:1px;text-transform:uppercase;color:var(--spore);
+}
+.video-card .vtitle{
+  font-family:'Fraunces',serif;font-size:1.16rem;font-weight:600;
+  margin:5px 0 6px;line-height:1.2;color:#fff;
+}
+.video-card .vdesc{font-size:.92rem;color:#cdd8c6;flex:1}
+.video-card .vgo{
+  margin-top:12px;font-family:'Spline Sans Mono',monospace;
+  font-size:.72rem;color:var(--spore);font-weight:600;
+}
+
+/* ---------- REVIEW ---------- */
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:14px}
+.rcard{
+  background:var(--parchment);border:1px solid var(--line);
+  border-radius:12px;padding:16px 18px;border-left:4px solid var(--moss);
+}
+.rcard h4{margin:0 0 4px;color:var(--forest-deep)}
+.rcard p{font-size:.93rem;margin:4px 0 0;color:var(--ink-soft)}
+
+.callout-num{
+  font-family:'Spline Sans Mono',monospace;color:var(--terra);
+  font-weight:600;
+}
+footer{
+  max-width:1180px;margin:0 auto;padding:30px 22px 60px;
+  text-align:center;color:var(--ink-soft);font-size:.9rem;
+}
+footer .leaf{font-size:1.5rem;color:var(--moss)}
+
+@media(max-width:680px){
+  body{font-size:17px}
+  .section{padding:26px 20px}
+  .hero{padding:36px 20px 20px}
+  .nav{display:none}
+  .flow{flex-direction:column;align-items:stretch}
+  .arrow{transform:rotate(90deg);align-self:center}
+  .step{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">🌿 Pteridó<span>fitas</span></div>
+    <nav class="nav">
+      <a href="#visao">Visão geral</a>
+      <a href="#arvore">Filogenia</a>
+      <a href="#conceito">Conceito</a>
+      <a href="#inovacoes">Inovações</a>
+      <a href="#corpo">Esporófito</a>
+      <a href="#esporangios">Soros</a>
+      <a href="#gametofito">Prótalo</a>
+      <a href="#ciclo">Ciclo de vida</a>
+      <a href="#monilo">Monilophyta</a>
+      <a href="#lyco">Lycophyta</a>
+      <a href="#comparacao">Comparação</a>
+      <a href="#pegadinhas">Pegadinhas</a>
+      <a href="#prova">Cai na prova</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#revisao">Revisão</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="kicker">Biodiversidade Vegetal · Aula 08 · Reino Plantae</div>
+  <h1>Pteridófitas:<br>as primeiras plantas <em>vasculares</em></h1>
+  <p class="lead">Da conquista do ambiente terrestre ao ciclo haplodiplobionte das samambaias e licófitas — uma aula completa, do zero ao avançado, para os vestibulares mais concorridos do Brasil.</p>
+  <div class="hero-meta">
+    <span class="tag solid">2º ano · Ensino Médio</span>
+    <span class="tag">Monilophyta</span>
+    <span class="tag">Lycopodiophyta</span>
+    <span class="tag">Alternância de gerações</span>
+    <span class="tag">Vasos condutores</span>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================================================== 1 -->
+<section class="section" id="visao">
+  <div class="section-head"><span class="snum">01</span><h2>Visão geral do tema</h2></div>
+  <p class="lead-p">As <strong>"pteridófitas"</strong> são o grupo de plantas que ocupa uma posição-chave na história evolutiva dos vegetais: foram as <strong>primeiras plantas vasculares</strong> da Terra. Esse único fato muda tudo — a presença de vasos condutores permitiu que elas crescessem em altura, transportassem água e seiva a distâncias maiores e dominassem florestas inteiras no passado geológico.</p>
+
+  <p>O nome popular mais conhecido é <strong>samambaia</strong>, mas o grupo também inclui avencas, cavalinhas, o trevo-de-quatro-folhas aquático, licopódios e selaginelas. Apesar do enorme avanço que representam, as pteridófitas guardam uma "herança" das briófitas: <strong>ainda dependem da água para a reprodução</strong>, porque seus gametas masculinos nadam até o gameta feminino. Por isso vivem em ambientes úmidos e sombreados.</p>
+
+  <p>Nesta aula você vai entender, em ordem lógica: <strong>(1)</strong> onde as pteridófitas se encaixam na árvore das plantas; <strong>(2)</strong> que o termo "pteridófita" não designa um grupo natural; <strong>(3)</strong> quais novidades evolutivas elas trouxeram; <strong>(4)</strong> a estrutura do corpo (raiz, caule, folha); <strong>(5)</strong> onde e como se formam os esporos; <strong>(6)</strong> o ciclo de vida com alternância de gerações — tanto o caso simples das samambaias quanto o caso avançado das selaginelas; e <strong>(7)</strong> os dois filos atuais e seus representantes.</p>
+
+  <div class="box def">
+    <div class="box-title">⌖ Por que o tema cai tanto</div>
+    <p style="margin:0">Pteridófitas concentram dois assuntos que as bancas adoram: a <strong>transição evolutiva</strong> briófita → pteridófita → planta com semente, e o <strong>ciclo haplodiplobionte</strong>. Dominar esta aula resolve questões de botânica, evolução e até citologia (ploidia n/2n).</p>
+  </div>
+</section>
+
+<!-- ===================================================== 2 -->
+<section class="section" id="arvore">
+  <div class="section-head"><span class="snum">02</span><h2>Onde as pteridófitas se encaixam na árvore da vida</h2></div>
+  <p class="lead-p">O slide inicial da aula apresenta um grande cladograma. Vamos lê-lo com calma, porque ele organiza toda a botânica do Ensino Médio.</p>
+
+  <h3>Os grandes "envelopes" do esquema</h3>
+  <p>Pense na árvore como caixas dentro de caixas — cada caixa maior contém as menores:</p>
+  <ul>
+    <li><strong>Archaeplastida (Primoplantae)</strong> — o grupo mais amplo. Reúne todos os organismos cujos cloroplastos surgiram de uma <em class="sci">endossimbiose primária com cianobactéria</em>. Inclui glaucófitas, algas vermelhas (rodofíceas) e o grupo verde.</li>
+    <li><strong>Viridiplantae</strong> — "plantas verdes": as algas verdes (clorofíceas e carofíceas) somadas a todas as plantas terrestres.</li>
+    <li><strong>Embriófitas</strong> — as <strong>plantas terrestres</strong> propriamente ditas. O nome vem da grande novidade do grupo: todas formam um <strong>embrião multicelular</strong>, protegido na planta-mãe.</li>
+  </ul>
+
+  <div class="box complement">
+    <div class="box-title">+ Complemento para melhor compreensão</div>
+    <p style="margin:0"><strong>Endossimbiose primária:</strong> há mais de um bilhão de anos, uma célula eucarionte "engoliu" uma cianobactéria e, em vez de digeri-la, passou a viver com ela. Essa bactéria virou o <strong>cloroplasto</strong>. É a origem da fotossíntese nas plantas — daí o cloroplasto ter DNA próprio e dupla membrana.</p>
+  </div>
+
+  <h3>As quatro grandes linhas das embriófitas</h3>
+  <p>Dentro das embriófitas, a aula destaca quatro grupos entre aspas (as aspas são propositais — já vamos explicar por quê):</p>
+  <div class="tree">
+    <div class="tree-line">
+      <span class="node-dot" style="background:#7a8c6a"></span>
+      <span class="tree-grp">"Briófitas"</span>
+      <span class="tree-note">— musgos, hepáticas e antóceros. Sem vasos condutores (avasculares).</span>
+    </div>
+    <div class="tree-line">
+      <span class="node-dot" style="background:var(--moss)"></span>
+      <span class="tree-grp">"Pteridófitas"</span>
+      <span class="tree-note">— samambaias e afins. <strong>Primeiras plantas vasculares</strong>, sem semente.</span>
+    </div>
+    <div class="tree-line">
+      <span class="node-dot" style="background:var(--spore)"></span>
+      <span class="tree-grp">"Gimnospermas"</span>
+      <span class="tree-note">— pinheiros, ciprestes etc. Têm semente "nua", sem fruto.</span>
+    </div>
+    <div class="tree-line">
+      <span class="node-dot" style="background:var(--terra)"></span>
+      <span class="tree-grp">Angiospermas</span>
+      <span class="tree-note">— plantas com flor e fruto. O grupo mais derivado e diverso.</span>
+    </div>
+  </div>
+
+  <h3>As novidades evolutivas marcadas na linha do tempo</h3>
+  <p>No cladograma, cada "traço colorido" sobre o ramo principal representa uma <strong>novidade evolutiva</strong> (em biologia chamamos de <strong>sinapomorfia</strong> — característica nova compartilhada pelos descendentes daquele ponto). Lendo de baixo para cima, ou seja, do mais antigo para o mais recente:</p>
+  <div class="tree">
+    <div class="tree-line"><span class="tree-syn">↑ 1</span><span>Endossimbiose primária com cianobactéria <span class="tree-note">→ surge o cloroplasto</span></span></div>
+    <div class="tree-line"><span class="tree-syn">↑ 2</span><span>Perda da parede celular da cianobactéria</span></div>
+    <div class="tree-line"><span class="tree-syn">↑ 3</span><span>Surgimento da <strong>clorofila <em>b</em></strong> <span class="tree-note">→ marca as plantas verdes</span></span></div>
+    <div class="tree-line"><span class="tree-syn">↑ 4</span><span><strong>Conquista do ambiente terrestre</strong> + formação de <strong>embrião</strong> <span class="tree-note">→ embriófitas</span></span></div>
+    <div class="tree-line"><span class="tree-syn">↑ 5</span><span><strong>Vasos condutores de seiva</strong> <span class="tree-note">→ a partir das pteridófitas</span></span></div>
+    <div class="tree-line"><span class="tree-syn">↑ 6</span><span><strong>Semente</strong> e <strong>grão de pólen</strong> <span class="tree-note">→ gimnospermas + angiospermas</span></span></div>
+    <div class="tree-line"><span class="tree-syn">↑ 7</span><span><strong>Flor e fruto</strong> <span class="tree-note">→ exclusivos das angiospermas</span></span></div>
+  </div>
+  <p>Repare na lógica: <strong>as pteridófitas estão no patamar em que aparecem os vasos condutores, mas ainda antes da semente</strong>. Esse "lugar na árvore" é a forma mais segura de definir o grupo — e é exatamente o que as bancas cobram.</p>
+</section>
+
+<!-- ===================================================== 3 -->
+<section class="section" id="conceito">
+  <div class="section-head"><span class="snum">03</span><h2>O que são "pteridófitas" — um grupo polifilético</h2></div>
+
+  <div class="box def">
+    <div class="box-title">⌖ Definição essencial</div>
+    <p style="margin:0">"Pteridófitas" é o nome tradicional dado às <strong>plantas vasculares sem sementes</strong>. Hoje sabemos que esse conjunto <strong>não é um grupo natural</strong>: ele reúne dois filos que não descendem de um único ancestral exclusivo. Por isso o nome aparece sempre <strong>entre aspas</strong> nos materiais modernos.</p>
+  </div>
+
+  <h3>Por que "polifilético"?</h3>
+  <p>Vamos definir o termo antes de usá-lo:</p>
+  <ul>
+    <li><strong>Grupo monofilético</strong> — contém um ancestral comum <em>e todos</em> os seus descendentes. É um grupo "natural", o ideal da classificação.</li>
+    <li><strong>Grupo parafilético</strong> — contém o ancestral, mas <em>deixa de fora</em> alguns descendentes.</li>
+    <li><strong>Grupo polifilético</strong> — agrupa seres por <strong>semelhança</strong>, mesmo que não compartilhem um ancestral exclusivo. É um agrupamento "artificial".</li>
+  </ul>
+  <p>As "pteridófitas" foram historicamente reunidas porque <strong>se parecem</strong> (plantas vasculares, sem flor, sem semente, que se reproduzem por esporos). Mas a genética e a filogenia mostraram que elas se dividem em <strong>duas linhagens distintas</strong>:</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <caption>Os dois filos reunidos sob o nome "pteridófitas"</caption>
+    <thead><tr><th>Filo</th><th>Representantes (exemplos da aula)</th><th>Destaque</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Monilophyta</strong><br><small>(samambaias e afins)</small></td><td>Samambaia, samambaia-açu (<em class="sci">samambaiaçu</em>), avenca, trevo-de-quatro-folhas, cavalinha (<em class="sci">açoita-cavalo</em>), psilotum</td><td>Grupo mais diverso e familiar; folhas grandes</td></tr>
+      <tr><td><strong>Lycopodiophyta</strong><br><small>(= Lycophyta)</small></td><td>Licopódio, selaginela</td><td>Linhagem mais antiga; folhas pequenas (microfilos)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Características gerais do grupo</h3>
+  <ul>
+    <li><strong>Habitat:</strong> predominantemente o <strong>ambiente terrestre</strong> (há também espécies aquáticas, como veremos).</li>
+    <li><strong>Plantas vasculares:</strong> possuem <strong>xilema e floema</strong> — tecidos condutores de seiva.</li>
+    <li><strong>Parede celular secundária com lignina:</strong> a lignina dá rigidez, sustentação e impermeabilidade — fundamental para o porte ereto.</li>
+    <li><strong>Reprodução dependente de água:</strong> ocorre em ambientes úmidos porque os <strong>gametas masculinos são biflagelados</strong> e nadam até o gameta feminino.</li>
+  </ul>
+
+  <div class="box complement">
+    <div class="box-title">+ Complemento para melhor compreensão</div>
+    <p style="margin:0">A <strong>lignina</strong> é a mesma substância que torna a madeira dura. Sua presença é o que diferencia, na prática, um tecido condutor "de verdade" (xilema lignificado) dos tecidos frágeis das briófitas. É a lignina que torna possível uma planta vascular ficar "de pé".</p>
+  </div>
+
+  <div class="box warn">
+    <div class="box-title">⚠ Erro frequente</div>
+    <p style="margin:0">Não diga que "pteridófita é um filo" ou "uma classe". Pteridófita é um <strong>nome de uso prático (polifilético)</strong>. Em prova, se pedirem o grupo natural, a resposta correta é citar <strong>Monilophyta</strong> e/ou <strong>Lycopodiophyta</strong>.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 4 -->
+<section class="section" id="inovacoes">
+  <div class="section-head"><span class="snum">04</span><h2>As grandes inovações evolutivas das embriófitas</h2></div>
+  <p class="lead-p">Um dos slides amplia o trecho do cladograma que vai das briófitas até as pteridófitas. Ele resume, em ordem, as conquistas que tornaram a vida terrestre possível. Entender essa sequência é entender a "lógica" da botânica.</p>
+
+  <h3>Sequência das conquistas (do ancestral ao mais derivado)</h3>
+  <ol>
+    <li><strong>Conquista do ambiente terrestre + cutícula</strong> — a cutícula é uma camada cerosa e impermeável que reveste a planta e <strong>reduz a perda de água</strong>. Sem ela, viver fora da água seria impossível. Aparece já nas embriófitas.</li>
+    <li><strong>Embrião</strong> — o zigoto se desenvolve em um embrião multicelular <strong>protegido dentro da planta-mãe</strong>, garantindo nutrição e proteção nos primeiros estágios. É a marca registrada das embriófitas (daí o nome).</li>
+    <li><strong>Vasos condutores de seiva</strong> — <strong>aqui entram as pteridófitas</strong>. O xilema conduz a seiva bruta (água e sais) e o floema conduz a seiva elaborada (açúcares). Permitiu o aumento de porte.</li>
+    <li><strong>Folhas verdadeiras</strong> — folhas vascularizadas, especializadas na fotossíntese. (As "folhas" das briófitas são apenas filídios, sem vasos.)</li>
+    <li><strong>Grão-de-pólen e semente</strong> — surgem <strong>depois</strong> das pteridófitas, nas gimnospermas. A semente protege e nutre o embrião; o grão de pólen leva o gameta masculino sem precisar de água.</li>
+  </ol>
+
+  <div class="box exam">
+    <div class="box-title">★ Leitura de prova</div>
+    <p style="margin:0">A pergunta clássica é: <em>"o que as pteridófitas têm que as briófitas não têm?"</em> → <strong>vasos condutores e folhas verdadeiras</strong>. E: <em>"o que as pteridófitas ainda NÃO têm?"</em> → <strong>semente e grão de pólen</strong> (continuam dependentes da água na reprodução).</p>
+  </div>
+
+  <h3>A imagem do "feto" — de onde vem o nome do grupo</h3>
+  <p>Um slide curioso compara o <strong>báculo</strong> (a folha jovem da samambaia, enrolada em espiral, também chamada de "cabeça de violino" ou <em>fiddlehead</em>) com a posição de um <strong>feto humano</strong>. Há um trocadilho didático aí: em inglês, samambaia é <em>"fern"</em>, e a folha jovem enrolada lembra um feto encurvado. Inclusive, o quadro-resumo da aula traz a expressão <strong>"plantas dos fetos"</strong> — uma referência bem-humorada a esse formato enrolado da folha em desenvolvimento.</p>
+
+  <div class="box complement">
+    <div class="box-title">+ Complemento para melhor compreensão</div>
+    <p style="margin:0">A folha jovem cresce de modo <strong>circinado</strong> (enrolada da ponta para a base) e vai se desenrolando à medida que amadurece. É uma adaptação que protege o tecido delicado da extremidade enquanto ele se desenvolve.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 5 -->
+<section class="section" id="corpo">
+  <div class="section-head"><span class="snum">05</span><h2>A estrutura do corpo: o esporófito</h2></div>
+  <p class="lead-p">Quando você olha uma samambaia num vaso, está vendo o <strong>esporófito</strong> — a fase diploide (2n), grande, duradoura e dominante do ciclo. É a "planta" no sentido comum da palavra. Ela tem três órgãos vegetativos verdadeiros, todos vascularizados.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <caption>Os três órgãos vegetativos da pteridófita (esporófito)</caption>
+    <thead><tr><th>Órgão</th><th>Função</th><th>Observação</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Raiz</strong></td><td>Fixação no solo e absorção de água e sais minerais</td><td>Verdadeira e vascularizada (briófitas têm apenas rizoides)</td></tr>
+      <tr><td><strong>Caule</strong></td><td>Sustentação e ligação entre raiz e folhas; conduz seiva</td><td>Em muitas samambaias é um <strong>rizoma</strong> (caule subterrâneo horizontal)</td></tr>
+      <tr><td><strong>Folha</strong></td><td>Fotossíntese; abriga as estruturas reprodutivas (soros)</td><td>Folha verdadeira, grande, frequentemente dividida em folíolos. Quando jovem é o <strong>báculo</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Diversidade de formas — exemplos vistos na aula</h3>
+  <p>A aula mostra fotos reais que revelam como o grupo é variado:</p>
+  <ul>
+    <li><em class="sci">Polypodium</em> e <em class="sci">Nephrolepis</em> — samambaias comuns, muito usadas como ornamentais (vasos, jardineiras suspensas).</li>
+    <li><em class="sci">Adiantum</em> — a <strong>avenca</strong>, de folíolos delicados em forma de leque.</li>
+    <li><em class="sci">Cyathea</em> — a <strong>samambaia-açu</strong> (xaxim), uma samambaia <strong>arborescente</strong>: tem caule aéreo, ereto e pode atingir vários metros de altura. Prova de que o porte elevado só foi possível graças aos vasos condutores.</li>
+  </ul>
+
+  <div class="box exam">
+    <div class="box-title">★ Detalhe valioso</div>
+    <p style="margin:0">A existência da <strong>samambaia-açu</strong> (planta arborescente, alta) é o argumento clássico para mostrar a vantagem dos <strong>vasos condutores</strong>: sem eles, uma planta não conseguiria transportar água até vários metros de altura nem se sustentar.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 6 -->
+<section class="section" id="esporangios">
+  <div class="section-head"><span class="snum">06</span><h2>Onde nascem os esporos: soros e esporângios</h2></div>
+  <p class="lead-p">Vire uma folha de samambaia adulta e você verá pontinhos marrons, alaranjados ou amarelados na face inferior. Muita gente acha que é "doença" ou "ferrugem" — mas são as estruturas reprodutivas da planta.</p>
+
+  <h3>A cadeia de estruturas (do maior ao menor)</h3>
+  <div class="flow">
+    <div class="step"><b>Folha fértil</b><small>esporófilo: folha que carrega esporângios</small></div>
+    <div class="arrow">→</div>
+    <div class="step"><b>Soro</b><small>conjunto (aglomerado) de esporângios</small></div>
+    <div class="arrow">→</div>
+    <div class="step"><b>Esporângio</b><small>"saquinho" onde os esporos são produzidos</small></div>
+    <div class="arrow">→</div>
+    <div class="step"><b>Esporócito</b><small>célula-mãe de esporo, diploide (2n)</small></div>
+    <div class="arrow">→</div>
+    <div class="step event"><b>MEIOSE</b><small>reduz a ploidia 2n → n</small></div>
+    <div class="arrow">→</div>
+    <div class="step hap"><b>Esporos</b><small>haploides (n) — serão liberados</small></div>
+  </div>
+
+  <div class="box def">
+    <div class="box-title">⌖ Vocabulário que cai em prova</div>
+    <ul style="margin:0">
+      <li><strong>Soro</strong> = agrupamento de esporângios na face inferior da folha. Aparece como pontos coloridos.</li>
+      <li><strong>Esporângio</strong> = estrutura que produz e contém os esporos.</li>
+      <li><strong>Esporócito</strong> = célula-mãe de esporo (2n). Sofre <strong>meiose</strong>.</li>
+      <li><strong>Esporo</strong> = célula reprodutiva haploide (n), resistente, dispersada pelo vento. Germina formando o gametófito.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <div class="box-title">⚠ Pegadinha de ploidia</div>
+    <p style="margin:0">O <strong>esporo é haploide (n)</strong>, mas é produzido por um indivíduo diploide (o esporófito). Quem faz a meiose é o <strong>esporócito (2n)</strong>. Logo: <strong>meiose ESPÓRICA</strong> — ocorre na formação dos esporos, não na formação dos gametas. Guarde isto: nas plantas, a meiose produz <strong>esporos</strong>, não gametas.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 7 -->
+<section class="section" id="gametofito">
+  <div class="section-head"><span class="snum">07</span><h2>O gametófito: o prótalo</h2></div>
+  <p class="lead-p">Quando um esporo cai em um lugar úmido e germina, ele <strong>não</strong> forma uma nova samambaia diretamente. Ele forma uma estrutura pequena, verde e independente: o <strong>gametófito</strong>, que nas pteridófitas recebe o nome especial de <strong>prótalo</strong>.</p>
+
+  <h3>Características do prótalo</h3>
+  <ul>
+    <li><strong>Haploide (n)</strong> — origina-se diretamente do esporo, por mitoses.</li>
+    <li><strong>Pequeno, laminar e fotossintetizante</strong> — costuma ter formato de <strong>coração (cordiforme)</strong>.</li>
+    <li><strong>Vida curta e efêmera</strong> — dura pouco tempo, ao contrário do esporófito.</li>
+    <li><strong>Independente</strong> — faz sua própria fotossíntese (é clorofilado).</li>
+  </ul>
+
+  <h3>As estruturas reprodutivas do prótalo</h3>
+  <p>É no prótalo que ficam os <strong>gametângios</strong> — órgãos que produzem os gametas:</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Gametângio</th><th>Produz</th><th>Tipo de gameta</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Anterídio</strong> (♂)</td><td>Anterozoides</td><td>Gameta masculino — <strong>biflagelado</strong>, móvel, nada na água</td></tr>
+      <tr><td><strong>Arquegônio</strong> (♀)</td><td>Oosfera</td><td>Gameta feminino — imóvel, fica retido no arquegônio</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box complement">
+    <div class="box-title">+ Complemento para melhor compreensão</div>
+    <p style="margin:0">No prótalo da <strong>samambaia (Monilophyta)</strong>, anterídios e arquegônios costumam ficar no <strong>mesmo</strong> gametófito — por isso ele é <strong>monoico / hermafrodita</strong>. Já nas licófitas (<strong>Lycophyta</strong>), os gametófitos são <strong>dioicos</strong> — sexos separados, um gametófito masculino e outro feminino. Esse contraste é exatamente o que a aula destaca no quadro final.</p>
+  </div>
+
+  <div class="box warn">
+    <div class="box-title">⚠ A "água da reprodução"</div>
+    <p style="margin:0">A fecundação <strong>só acontece se houver um filme de água</strong> sobre o prótalo: o anterozoide biflagelado precisa <strong>nadar</strong> do anterídio até o arquegônio. Esta é a razão pela qual as pteridófitas dependem de ambientes úmidos — e a explicação para a frase clássica das provas: <em>"pteridófitas conquistaram o ambiente terrestre, mas ainda não se libertaram da água para a reprodução."</em></p>
+  </div>
+</section>
+
+<!-- ===================================================== 8 -->
+<section class="section" id="ciclo">
+  <div class="section-head"><span class="snum">08</span><h2>O ciclo de vida: alternância de gerações</h2></div>
+  <p class="lead-p">Este é o coração da aula — e o tópico mais cobrado. As pteridófitas têm um <strong>ciclo haplodiplobionte</strong> (também chamado de <strong>metagênese</strong> ou alternância de gerações), em que duas "plantas" diferentes se alternam: uma diploide e uma haploide.</p>
+
+  <div class="box def">
+    <div class="box-title">⌖ Os dois conceitos-chave</div>
+    <ul style="margin:0">
+      <li><strong>Ciclo haplodiplobionte:</strong> existem <strong>dois indivíduos multicelulares</strong> distintos — o esporófito (2n) e o gametófito (n) — que se alternam ao longo do ciclo.</li>
+      <li><strong>Esporófito dominante:</strong> nas pteridófitas, ao contrário das briófitas, a <strong>fase diploide (esporófito) é a maior e duradoura</strong>. Nas briófitas, quem domina é o gametófito. <em>Essa inversão é uma das pegadinhas favoritas das bancas.</em></li>
+    </ul>
+  </div>
+
+  <h3>Visão de mão dupla: as duas conversões de ploidia</h3>
+  <p>Todo ciclo haplodiplobionte gira em torno de <strong>dois eventos</strong> que mudam a ploidia, em sentidos opostos:</p>
+  <div class="flow">
+    <div class="step event"><b>MEIOSE espórica</b><small>2n → n · ocorre no esporângio, produz ESPOROS</small></div>
+    <div class="arrow">↔</div>
+    <div class="step event"><b>FECUNDAÇÃO</b><small>n + n → 2n · une os gametas, forma o ZIGOTO</small></div>
+  </div>
+  <p>Entre esses dois eventos, tudo o que acontece é <strong>mitose</strong> (crescimento). Memorize: <strong>esporo nasce de meiose; gameta nasce de mitose</strong> — porque o gametófito já é haploide e só precisa se multiplicar sem reduzir cromossomos.</p>
+
+  <div class="divider"></div>
+
+  <!-- CICLO A: SAMAMBAIA -->
+  <h3>8.1 — Ciclo da samambaia (Monilophyta) — homospórico</h3>
+  <p>Este é o ciclo "padrão", o que aparece no diagrama de exercício da aula com a numeração de <span class="callout-num">1 a 13</span>. É chamado <strong>homospórico</strong> (ou <strong>isospórico</strong>) porque a planta produz <strong>um único tipo de esporo</strong>, todos iguais.</p>
+
+  <div class="cycle">
+    <div class="cycle-title">Ciclo Haplodiplobionte da Samambaia · isospórico</div>
+    <div class="flow">
+      <div class="step dip"><b>Esporófito adulto</b><small>a samambaia (raiz, caule, folha)</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Soro / Esporângio</b><small>na face inferior da folha</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Esporócitos</b><small>células-mães de esporos</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step event"><b>MEIOSE</b><small>redução cromossômica</small></div>
+      <div class="arrow">→</div>
+      <div class="step hap"><b>Esporos</b><small>liberados → dispersos pelo vento</small><span class="ploidy pn">n</span></div>
+    </div>
+    <div class="flow" style="margin-top:8px">
+      <div class="step hap"><b>Prótalo (gametófito)</b><small>cordiforme, hermafrodita, efêmero</small><span class="ploidy pn">n</span></div>
+      <div class="arrow">→</div>
+      <div class="step hap"><b>Anterídio + Arquegônio</b><small>produzem anterozoides e oosfera (mitose)</small><span class="ploidy pn">n</span></div>
+      <div class="arrow">→</div>
+      <div class="step event"><b>FECUNDAÇÃO</b><small>na água: anterozoide nada até a oosfera</small></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Zigoto → Embrião</b><small>desenvolve-se sobre o prótalo</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Esporófito jovem</b><small>cresce e origina nova samambaia</small><span class="ploidy p2n">2n</span></div>
+    </div>
+  </div>
+
+  <h4>Legenda do diagrama da aula (itens 1–13)</h4>
+  <div class="legend-grid">
+    <div><b>1</b>Pteridófitas (esporófito adulto)</div>
+    <div><b>2</b>Esporófito</div>
+    <div><b>3</b>Folha</div>
+    <div><b>4</b>Caule</div>
+    <div><b>5</b>Raiz</div>
+    <div><b>6</b>Báculo (folha jovem enrolada)</div>
+    <div><b>7</b>Soro</div>
+    <div><b>8</b>Esporângio</div>
+    <div><b>9</b>Células-mães de esporos (esporócitos)</div>
+    <div><b>10</b>Esporos</div>
+    <div><b>11</b>Liberação dos esporos</div>
+    <div><b>12</b>Gametófito hermafrodita (prótalo)</div>
+    <div><b>13</b>Esporófito jovem</div>
+  </div>
+
+  <div class="box exam">
+    <div class="box-title">★ Como resolver a numeração do esquema</div>
+    <p style="margin:0">A lógica do diagrama: parte do <strong>esporófito adulto (1–6)</strong> → vai para a folha fértil com <strong>soro e esporângio (7–8)</strong> → dentro dele os <strong>esporócitos (9)</strong> sofrem meiose e geram <strong>esporos (10)</strong> que são <strong>liberados (11)</strong> → o esporo germina no <strong>prótalo (12)</strong> → após a fecundação surge o <strong>esporófito jovem (13)</strong>, que recomeça o ciclo.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CICLO B: HETEROSPÓRICO -->
+  <h3>8.2 — Ciclo heterospórico (Lycophyta / Selaginela)</h3>
+  <p>Algumas pteridófitas — sobretudo as licófitas como a <em class="sci">Selaginella</em> — apresentam um ciclo mais avançado, chamado <strong>heterospórico</strong>. É a numeração de <span class="callout-num">14 a 33</span> do diagrama da aula.</p>
+
+  <div class="box def">
+    <div class="box-title">⌖ Homospórico × Heterospórico</div>
+    <ul style="margin:0">
+      <li><strong>Homospóricas (isospóricas):</strong> produzem <strong>um só tipo de esporo</strong>. O prótalo formado é hermafrodita. Ex.: a maioria das samambaias.</li>
+      <li><strong>Heterospóricas:</strong> produzem <strong>dois tipos de esporo</strong> — <strong>micrósporo</strong> (origina o gametófito masculino) e <strong>megásporo</strong> (origina o gametófito feminino). Ex.: <em class="sci">Selaginella</em>, e também as pteridófitas aquáticas <em class="sci">Marsilea</em> e <em class="sci">Salvinia</em>.</li>
+    </ul>
+  </div>
+
+  <p>Nas heterospóricas, os esporângios ficam reunidos em uma estrutura compacta chamada <strong>estróbilo</strong> (uma espécie de "espiga"), formada por folhas modificadas — os <strong>esporófilos</strong>. Há dois tipos de esporófilo:</p>
+
+  <div class="cycle">
+    <div class="cycle-title">Ciclo Heterospórico · linha masculina e linha feminina</div>
+    <p style="text-align:center;font-size:.85rem;color:var(--ink-soft);margin:0 0 12px">Tudo começa no <strong>esporófito (2n)</strong>, que forma o <strong>estróbilo</strong>. O estróbilo se divide em duas linhas:</p>
+    <div class="flow">
+      <div class="step dip"><b>♂ Microsporófilo</b><small>folha modificada masculina</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Microsporângio</b><small>contém microsporócitos (2n)</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step event"><b>MEIOSE</b></div>
+      <div class="arrow">→</div>
+      <div class="step hap"><b>Micrósporos</b><small>liberados</small><span class="ploidy pn">n</span></div>
+      <div class="arrow">→</div>
+      <div class="step hap"><b>Microgametófito ♂</b><small>gametófito masculino</small><span class="ploidy pn">n</span></div>
+    </div>
+    <div class="flow" style="margin-top:8px">
+      <div class="step dip"><b>♀ Megasporófilo</b><small>folha modificada feminina</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Megasporângio</b><small>contém megasporócitos (2n)</small><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step event"><b>MEIOSE</b></div>
+      <div class="arrow">→</div>
+      <div class="step hap"><b>Megásporos</b><small>liberados</small><span class="ploidy pn">n</span></div>
+      <div class="arrow">→</div>
+      <div class="step hap"><b>Megagametófito ♀</b><small>gametófito feminino</small><span class="ploidy pn">n</span></div>
+    </div>
+    <div class="flow" style="margin-top:8px">
+      <div class="step event"><b>FECUNDAÇÃO</b><small>gameta ♂ + oosfera ♀</small></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Zigoto</b><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Embrião</b><span class="ploidy p2n">2n</span></div>
+      <div class="arrow">→</div>
+      <div class="step dip"><b>Esporófito jovem</b><small>recomeça o ciclo</small><span class="ploidy p2n">2n</span></div>
+    </div>
+  </div>
+
+  <h4>Legenda do diagrama da aula (itens 14–33)</h4>
+  <div class="legend-grid">
+    <div><b>14</b>Monilophyta</div>
+    <div><b>15</b>Lycophyta</div>
+    <div><b>16</b>Esporófito</div>
+    <div><b>17</b>Estróbilo</div>
+    <div><b>18</b>Microsporófilo</div>
+    <div><b>19</b>Microsporângio</div>
+    <div><b>20</b>Células-mães de micrósporos (microsporócitos)</div>
+    <div><b>21</b>Megasporófilo</div>
+    <div><b>22</b>Megasporângio</div>
+    <div><b>23</b>Células-mães de megásporos (megasporócitos)</div>
+    <div><b>24</b>Micrósporos</div>
+    <div><b>25</b>Megásporos</div>
+    <div><b>26</b>Liberação dos micrósporos</div>
+    <div><b>27</b>Liberação dos megásporos</div>
+    <div><b>28</b>Gametófito masculino (microgametófito)</div>
+    <div><b>29</b>Gametófito feminino (megagametófito)</div>
+    <div><b>30</b>Fecundação</div>
+    <div><b>31</b>Zigoto</div>
+    <div><b>32</b>Embrião</div>
+    <div><b>33</b>Esporófito jovem</div>
+  </div>
+
+  <div class="box complement">
+    <div class="box-title">+ Complemento — por que a heterosporia importa</div>
+    <p style="margin:0">A heterosporia é considerada um <strong>"ensaio evolutivo" para a semente</strong>. A separação entre micrósporo (masculino) e megásporo (feminino) é o primeiro passo de um caminho que, nas gimnospermas e angiospermas, levaria ao <strong>grão de pólen</strong> (derivado do micrósporo) e ao <strong>óvulo/semente</strong> (associado ao megásporo). Por isso é tema recorrente em questões de evolução vegetal.</p>
+  </div>
+
+  <div class="box warn">
+    <div class="box-title">⚠ Cuidado com a prova</div>
+    <p style="margin:0">Mesmo no ciclo heterospórico, a <strong>meiose continua sendo espórica</strong> (forma esporos, não gametas) e a planta <strong>continua dependendo de água</strong> na fecundação. Heterosporia <em>não</em> significa independência da água — isso só acontece com o surgimento do grão de pólen.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 9 -->
+<section class="section" id="monilo">
+  <div class="section-head"><span class="snum">09</span><h2>Filo Monilophyta</h2></div>
+  <p class="lead-p">Monilophyta é o filo das <strong>samambaias e seus parentes</strong> — o grupo mais diverso e familiar das pteridófitas. A grande novidade que a aula destaca para este filo é a presença de <strong>vasos condutores de seiva (xilema e floema)</strong>.</p>
+
+  <h3>Representantes citados na aula</h3>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Representante</th><th>Nome popular</th><th>Destaque</th></tr></thead>
+    <tbody>
+      <tr><td><em class="sci">Polypodium</em>, <em class="sci">Nephrolepis</em></td><td>Samambaias comuns</td><td>Ornamentais; folhas grandes divididas em folíolos</td></tr>
+      <tr><td><em class="sci">Cyathea</em></td><td>Samambaia-açu / xaxim</td><td>Samambaia <strong>arborescente</strong> — caule aéreo, vários metros</td></tr>
+      <tr><td><em class="sci">Adiantum</em></td><td>Avenca</td><td>Folíolos delicados em leque; muito usada como planta de interior</td></tr>
+      <tr><td><em class="sci">Marsilea</em></td><td>Trevo-de-quatro-folhas (aquático)</td><td>Pteridófita <strong>aquática</strong>; lembra um trevo, mas é uma samambaia. <strong>Heterospórica</strong></td></tr>
+      <tr><td><em class="sci">Salvinia</em></td><td>Samambaia-d'água</td><td>Pteridófita <strong>aquática flutuante</strong>. <strong>Heterospórica</strong></td></tr>
+      <tr><td><em class="sci">Psilotum</em></td><td>—</td><td>Aspecto muito simples, sem folhas evidentes; corpo formado por ramos finos</td></tr>
+      <tr><td><em class="sci">Equisetum</em></td><td>Cavalinha / açoita-cavalo</td><td>Caule com nós marcantes; produz estróbilo no ápice. Usada em chás populares</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box warn">
+    <div class="box-title">⚠ Pegadinha clássica</div>
+    <p style="margin:0">O <strong>"trevo-de-quatro-folhas" <em class="sci">Marsilea</em></strong> e a <strong>"samambaia-d'água" <em class="sci">Salvinia</em></strong> são <strong>pteridófitas</strong> — não são plantas com flor nem algas. A banca adora mostrar a foto do "trevinho" e perguntar o grupo: a resposta é <strong>pteridófita (Monilophyta)</strong>. E mais: sendo aquáticas, são exemplos de pteridófitas <strong>heterospóricas</strong>.</p>
+  </div>
+
+  <div class="box complement">
+    <div class="box-title">+ Complemento — Equisetum</div>
+    <p style="margin:0">O <em class="sci">Equisetum</em> (cavalinha) tem caule rico em <strong>sílica</strong>, o que o torna áspero — no passado foi usado para polir utensílios, daí o apelido "cauda-de-cavalo / horsetail". É também a única linhagem viva de um grupo que, no período Carbonífero, formou florestas gigantescas.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 10 -->
+<section class="section" id="lyco">
+  <div class="section-head"><span class="snum">10</span><h2>Filo Lycopodiophyta (Lycophyta)</h2></div>
+  <p class="lead-p">Lycopodiophyta — também grafado <strong>Lycophyta</strong> — é a <strong>linhagem mais antiga</strong> entre as plantas vasculares vivas. A aula destaca duas características centrais para este filo.</p>
+
+  <h3>Características centrais</h3>
+  <ul>
+    <li><strong>Vasos condutores de seiva</strong> — possuem xilema e floema, como toda planta vascular.</li>
+    <li><strong>Heterosporadas</strong> — várias licófitas (em especial a <em class="sci">Selaginella</em>) produzem <strong>dois tipos de esporo</strong> (micrósporo e megásporo). É o ciclo heterospórico detalhado na seção 8.2.</li>
+  </ul>
+
+  <h3>Representantes citados na aula</h3>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Representante</th><th>Destaque</th></tr></thead>
+    <tbody>
+      <tr><td><em class="sci">Lycopodium</em></td><td>Licopódio; ramos cobertos por folhas pequenas; produz estróbilos no ápice</td></tr>
+      <tr><td><em class="sci">Selaginella</em></td><td>Planta rasteira de folhas miúdas; <strong>exemplo clássico de pteridófita heterospórica</strong>. O corte do estróbilo mostra micro e megasporângios</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box complement">
+    <div class="box-title">+ Complemento para melhor compreensão</div>
+    <p style="margin:0">Na imagem de microscopia da aula, o corte longitudinal do <strong>estróbilo de <em class="sci">Selaginella</em></strong> revela esporângios com conteúdos diferentes: alguns repletos de <strong>muitos micrósporos pequenos</strong>, outros com <strong>poucos megásporos grandes</strong>. Essa diferença visível de tamanho e número é a marca da <strong>heterosporia</strong> — e é uma figura recorrente nas provas da Fuvest e da Unesp.</p>
+  </div>
+
+  <div class="box exam">
+    <div class="box-title">★ Diferença Monilophyta × Lycophyta que cai em prova</div>
+    <p style="margin:0">As licófitas têm folhas pequenas chamadas <strong>microfilos</strong> (com uma única nervura), enquanto as monilófitas têm folhas grandes e ramificadas (<strong>megafilos</strong>, com sistema de nervuras). Além disso, o ciclo da samambaia costuma ser <strong>homospórico</strong> e o gametófito é <strong>monoico</strong>; o da <em class="sci">Selaginella</em> é <strong>heterospórico</strong> e os gametófitos são <strong>dioicos</strong>.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 11 -->
+<section class="section" id="comparacao">
+  <div class="section-head"><span class="snum">11</span><h2>Comparação: Gametófito × Esporófito</h2></div>
+  <p class="lead-p">O slide-síntese da aula coloca as duas gerações lado a lado. Esta tabela resume tudo — é o material mais valioso para revisar na véspera da prova.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <caption>Quadro comparativo das duas gerações da pteridófita</caption>
+    <thead><tr><th>Critério</th><th>Gametófito</th><th>Esporófito</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ploidia</strong></td><td>Haploide (n)</td><td>Diploide (2n)</td></tr>
+      <tr><td><strong>Duração</strong></td><td>Curta · efêmero</td><td>Longa · perene</td></tr>
+      <tr><td><strong>Estrutura</strong></td><td>Mais simples (lâmina = prótalo)</td><td>Mais elaborada · vascularizado</td></tr>
+      <tr><td><strong>Fotossíntese</strong></td><td>Clorofilado (faz fotossíntese)</td><td>Clorofilado (faz fotossíntese)</td></tr>
+      <tr><td><strong>Dominância no ciclo</strong></td><td>Fase subordinada</td><td><strong>Fase dominante</strong> nas pteridófitas</td></tr>
+      <tr><td><strong>Sexualidade</strong></td><td><em class="sci">Monilophyta</em>: monoico (hermafrodita)<br><em class="sci">Lycophyta</em>: dioico (sexos separados)</td><td>—</td></tr>
+      <tr><td><strong>Produz</strong></td><td>Gametas (por <strong>mitose</strong>)</td><td>Esporos (por <strong>meiose</strong>)</td></tr>
+      <tr><td><strong>Tipo de esporo</strong></td><td>—</td><td><em class="sci">Monilophyta</em>: homosporia / isosporia<br><em class="sci">Lycophyta</em>: heterosporia</td></tr>
+      <tr><td><strong>Outras notas</strong></td><td>Também chamado de "prótalo"</td><td>Esporófito jovem é dependente do gametófito (prótalo) no início; em <em class="sci">Equisetum</em>, forma estróbilo</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box exam">
+    <div class="box-title">★ A grande comparação briófita × pteridófita</div>
+    <p style="margin:0">Nas <strong>briófitas</strong>, o <strong>gametófito é a fase dominante</strong> (o "musgo" verde que você vê) e o esporófito vive dependente dele. Nas <strong>pteridófitas</strong>, a relação se <strong>inverte</strong>: o <strong>esporófito é dominante</strong> e o gametófito (prótalo) é efêmero. Essa inversão é, disparado, a questão mais cobrada sobre o assunto.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 12 -->
+<section class="section" id="pegadinhas">
+  <div class="section-head"><span class="snum">12</span><h2>Pontos de atenção e pegadinhas</h2></div>
+  <p class="lead-p">Erros que derrubam o vestibulando — confira um a um antes da prova.</p>
+
+  <div class="box warn">
+    <div class="box-title">⚠ 1 · Quem domina o ciclo</div>
+    <p style="margin:0">Pteridófita → <strong>esporófito (2n) dominante</strong>. Briófita → gametófito (n) dominante. Nunca troque os dois.</p>
+  </div>
+  <div class="box warn">
+    <div class="box-title">⚠ 2 · Meiose espórica, não gamética</div>
+    <p style="margin:0">Nas plantas, a meiose produz <strong>esporos</strong> (não gametas). Os gametas são formados por <strong>mitose</strong> no gametófito, que já é haploide.</p>
+  </div>
+  <div class="box warn">
+    <div class="box-title">⚠ 3 · Esporo é haploide</div>
+    <p style="margin:0">O esporo é <strong>n</strong>, ainda que produzido por um esporófito 2n. Quem é 2n é o esporócito (célula-mãe). Sequência: esporócito (2n) → meiose → esporo (n).</p>
+  </div>
+  <div class="box warn">
+    <div class="box-title">⚠ 4 · "Pteridófita" não é grupo natural</div>
+    <p style="margin:0">É um agrupamento <strong>polifilético</strong>. Os grupos naturais são <strong>Monilophyta</strong> e <strong>Lycopodiophyta</strong>.</p>
+  </div>
+  <div class="box warn">
+    <div class="box-title">⚠ 5 · Ainda dependem de água</div>
+    <p style="margin:0">Pteridófitas <strong>conquistaram a terra</strong>, mas <strong>não</strong> se libertaram da água na reprodução — o anterozoide biflagelado precisa nadar. Independência da água só vem com o <strong>grão de pólen</strong> (gimnospermas).</p>
+  </div>
+  <div class="box warn">
+    <div class="box-title">⚠ 6 · Soro não é doença</div>
+    <p style="margin:0">Os pontinhos marrons sob a folha são <strong>soros</strong> (conjuntos de esporângios) — estruturas reprodutivas normais, não fungo nem praga.</p>
+  </div>
+  <div class="box warn">
+    <div class="box-title">⚠ 7 · O "trevo" Marsilea</div>
+    <p style="margin:0"><em class="sci">Marsilea</em> parece um trevo e <em class="sci">Salvinia</em> flutua na água — mas <strong>ambas são pteridófitas</strong> (Monilophyta) e <strong>heterospóricas</strong>.</p>
+  </div>
+  <div class="box warn">
+    <div class="box-title">⚠ 8 · Heterosporia ≠ semente</div>
+    <p style="margin:0">Produzir micrósporo e megásporo é um "ensaio" evolutivo para a semente, mas a planta heterospórica <strong>ainda não tem semente</strong> nem grão de pólen.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 13 -->
+<section class="section" id="prova">
+  <div class="section-head"><span class="snum">13</span><h2>O que mais cai em prova</h2></div>
+  <p class="lead-p">Os recortes preferidos das bancas mais concorridas (Fuvest, Unicamp, Unesp, ENEM) sobre pteridófitas.</p>
+
+  <h3>Temas campeões</h3>
+  <ol>
+    <li><strong>Inversão da dominância briófita × pteridófita</strong> — identificar que o esporófito é a fase dominante nas pteridófitas. Questão quase certa.</li>
+    <li><strong>Ploidia ao longo do ciclo</strong> — dizer se cada estrutura (esporo, prótalo, anterozoide, oosfera, zigoto, esporófito) é <strong>n ou 2n</strong>. Tipo de questão: "uma célula da folha tem 10 cromossomos; quantos terá o esporo? E o zigoto?".</li>
+    <li><strong>Localização da meiose</strong> — reconhecer que a meiose é <strong>espórica</strong> e ocorre no esporângio.</li>
+    <li><strong>Dependência de água na reprodução</strong> — explicar por que pteridófitas vivem em ambiente úmido (gameta masculino biflagelado).</li>
+    <li><strong>Sequência do ciclo</strong> — ordenar as etapas: esporófito → esporângio → meiose → esporo → prótalo → gametas → fecundação → zigoto → esporófito jovem. (Modelo idêntico ao diagrama numerado da aula.)</li>
+    <li><strong>Vasos condutores como vantagem evolutiva</strong> — relacionar a presença de xilema/floema ao maior porte (ex.: samambaia-açu).</li>
+    <li><strong>Homosporia × heterosporia</strong> — diferenciar a samambaia (um tipo de esporo) da <em class="sci">Selaginella</em> (micrósporo + megásporo).</li>
+  </ol>
+
+  <div class="box exam">
+    <div class="box-title">★ Treino-relâmpago de ploidia (resolva mentalmente)</div>
+    <p style="margin:6px 0 0">Se as células da folha de uma samambaia têm <strong>2n = 10</strong> cromossomos:</p>
+    <ul style="margin:6px 0 0">
+      <li>Esporócito → <strong>2n = 10</strong> (sofre meiose)</li>
+      <li>Esporo → <strong>n = 5</strong></li>
+      <li>Prótalo / gametófito → <strong>n = 5</strong> (mitose a partir do esporo)</li>
+      <li>Anterozoide e oosfera → <strong>n = 5</strong> (gametas, por mitose)</li>
+      <li>Zigoto → <strong>2n = 10</strong> (fecundação: n + n)</li>
+      <li>Esporófito jovem e adulto → <strong>2n = 10</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================================================== 14 -->
+<section class="section" id="videos">
+  <div class="section-head"><span class="snum">14</span><h2>Vídeos completos recomendados</h2></div>
+  <p class="lead-p">Aulas completas no YouTube, de professores conhecidos entre vestibulandos, para reforçar o conteúdo. Clique no card para abrir o vídeo diretamente.</p>
+
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=nLRy7t8T0W4" target="_blank" rel="noopener">
+      <div class="play"></div>
+      <div class="vlabel">Prof. Paulo Jubilut · Biologia Total</div>
+      <div class="vtitle">Grupos Vegetais — Briófitas, Pteridófitas, Gimnospermas e Angiospermas</div>
+      <div class="vdesc">Visão geral dos quatro grandes grupos de plantas: ótimo para situar as pteridófitas dentro do Reino Plantae e revisar as inovações evolutivas.</div>
+      <div class="vgo">▶ Abrir vídeo no YouTube</div>
+    </a>
+
+    <a class="video-card" href="https://www.youtube.com/watch?v=MWc0FIcfKWA" target="_blank" rel="noopener">
+      <div class="play"></div>
+      <div class="vlabel">Prof. Samuel Cunha · Biologia</div>
+      <div class="vtitle">Pteridófitas — Botânica · Aula completa</div>
+      <div class="vdesc">Aula focada exclusivamente nas pteridófitas: morfologia da samambaia, soros, alternância de gerações e dependência da água. Conteúdo voltado a ENEM e vestibular.</div>
+      <div class="vgo">▶ Abrir vídeo no YouTube</div>
+    </a>
+
+    <a class="video-card" href="https://www.youtube.com/watch?v=kt0bTZ67mWU" target="_blank" rel="noopener">
+      <div class="play"></div>
+      <div class="vlabel">Brasil Escola</div>
+      <div class="vtitle">Ciclo Reprodutivo das Pteridófitas</div>
+      <div class="vdesc">Videoaula dedicada ao ciclo de vida: passo a passo da alternância de gerações, do esporófito ao prótalo e de volta. Ideal para fixar a seção 8 desta aula.</div>
+      <div class="vgo">▶ Abrir vídeo no YouTube</div>
+    </a>
+  </div>
+
+  <div class="box complement">
+    <div class="box-title">+ Observação</div>
+    <p style="margin:0">Os links acima foram localizados como vídeos públicos indexados em busca. Caso algum vídeo tenha sido removido ou tornado privado pelo autor após esta aula ser montada, basta procurar o título exato no YouTube — todos são de canais educacionais consolidados e voltados a vestibular.</p>
+  </div>
+</section>
+
+<!-- ===================================================== 15 -->
+<section class="section" id="revisao">
+  <div class="section-head"><span class="snum">15</span><h2>Revisão final dos conceitos-chave</h2></div>
+  <p class="lead-p">Releia estes cartões na véspera da prova — eles condensam toda a aula.</p>
+
+  <div class="review-grid">
+    <div class="rcard">
+      <h4>Quem são</h4>
+      <p>"Pteridófitas" = plantas vasculares sem sementes. Grupo polifilético: Monilophyta + Lycopodiophyta.</p>
+    </div>
+    <div class="rcard">
+      <h4>A grande novidade</h4>
+      <p>Primeiras plantas com vasos condutores (xilema e floema) e folhas verdadeiras. Por isso atingem grande porte.</p>
+    </div>
+    <div class="rcard">
+      <h4>O que ainda falta</h4>
+      <p>Sem semente e sem grão de pólen. Dependem de água na reprodução — gameta masculino biflagelado nada até a oosfera.</p>
+    </div>
+    <div class="rcard">
+      <h4>O esporófito</h4>
+      <p>É a planta que vemos (a samambaia). Fase 2n, dominante, duradoura, com raiz, caule e folha verdadeiros.</p>
+    </div>
+    <div class="rcard">
+      <h4>O gametófito</h4>
+      <p>É o prótalo: pequeno, cordiforme, haploide (n), efêmero, clorofilado. Tem anterídio e arquegônio.</p>
+    </div>
+    <div class="rcard">
+      <h4>Soros e esporângios</h4>
+      <p>Soro = conjunto de esporângios na face inferior da folha. O esporócito (2n) sofre meiose e gera esporos (n).</p>
+    </div>
+    <div class="rcard">
+      <h4>Ciclo haplodiplobionte</h4>
+      <p>Alternância de gerações. Meiose espórica (2n→n) e fecundação (n→2n). Entre elas, só mitose.</p>
+    </div>
+    <div class="rcard">
+      <h4>Homosporia × heterosporia</h4>
+      <p>Samambaia: um tipo de esporo, prótalo hermafrodita. Selaginela: micrósporo + megásporo, gametófitos dioicos.</p>
+    </div>
+    <div class="rcard">
+      <h4>Monilophyta</h4>
+      <p>Samambaia, samambaia-açu (Cyathea), avenca (Adiantum), Marsilea, Salvinia, Psilotum, cavalinha (Equisetum).</p>
+    </div>
+    <div class="rcard">
+      <h4>Lycopodiophyta</h4>
+      <p>Linhagem mais antiga. Licopódio e Selaginella. Heterosporadas; folhas pequenas (microfilos).</p>
+    </div>
+    <div class="rcard">
+      <h4>Inversão briófita ↔ pteridófita</h4>
+      <p>Briófita: gametófito domina. Pteridófita: esporófito domina. A pegadinha mais cobrada.</p>
+    </div>
+    <div class="rcard">
+      <h4>Frase-síntese</h4>
+      <p>"As pteridófitas conquistaram a terra firme com vasos e folhas, mas continuam presas à água para reproduzir."</p>
+    </div>
+  </div>
+
+  <div class="box def" style="margin-top:24px">
+    <div class="box-title">⌖ Fechamento</div>
+    <p style="margin:0">Você percorreu a aula completa: do lugar das pteridófitas na árvore da vida, passando pelas inovações evolutivas, pela anatomia do esporófito, pelos soros, pelo prótalo, pelos dois tipos de ciclo (homo e heterospórico) e pelos dois filos atuais. Se você consegue, agora, <strong>desenhar o ciclo de vida da samambaia indicando a ploidia de cada etapa</strong> e <strong>explicar por que o esporófito domina</strong>, está pronto para enfrentar qualquer questão de vestibular sobre o tema. 🌿</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="leaf">❧</div>
+  <p>Aula 08 · Pteridófitas — Biodiversidade Vegetal · material de estudo para o 2º ano do Ensino Médio<br>
+  Conteúdo desenvolvido a partir dos slides do Prof. Croti e do diagrama de ciclo reprodutivo.</p>
+</footer>
+
+</body>
+</html>
